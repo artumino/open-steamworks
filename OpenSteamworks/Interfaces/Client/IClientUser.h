@@ -151,7 +151,7 @@ public:
 	virtual bool RunInstallScript( AppId_t pAppIDs, const char *pchUnk, bool bUninstall ) = 0;
 	virtual AppId_t IsInstallScriptRunning() = 0;
 	virtual bool GetInstallScriptState( char* pchDescription, uint32 cchDescription, uint32* punNumSteps, uint32* punCurrStep ) = 0;
-	virtual bool SpawnProcess( const char *lpApplicationName, const char *lpCommandLine, const char *lpCurrentDirectory, CGameID gameID, const char *pchGameName, uint32 uUnk, uint32 uUnk2, uint32 uUnk3 ) = 0;
+	virtual bool SpawnProcess( const char *lpApplicationName, const char *lpCommandLine, const char *lpCurrentDirectory, CGameID* gameID, const char *pchGameName, uint32 uUnk, uint32 uUnk2, uint32 uUnk3 ) = 0;
 	virtual uint32 GetAppOwnershipTicketLength( uint32 nAppID ) = 0;
 	virtual uint32 GetAppOwnershipTicketData( uint32 nAppID, void *pvBuffer, uint32 cbBufferLength ) = 0;
 	virtual uint32 GetAppOwnershipTicketExtendedData( uint32 nAppID, void *pvBuffer, uint32 cbBufferLength, uint32* piAppId, uint32* piSteamId, uint32* piSignature, uint32* pcbSignature ) = 0;
